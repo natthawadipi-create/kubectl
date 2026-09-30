@@ -4,3 +4,10 @@ kubectl delete all --all
 kubectl delete pods client-deployment-5bd46cd6c4-zgsxv
 kubectl delete deployment client-deployment
 kubectl get all
+
+kubectl apply -f .
+kubectl port-forward svc/client-service 30001:80
+kubectl port-forward svc/server-service 30002:80
+ClusterIP
+http://localhost:30001/
+http://localhost:30002/api/health
