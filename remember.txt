@@ -11,3 +11,12 @@ kubectl port-forward svc/server-service 30002:80
 ClusterIP
 http://localhost:30001/
 http://localhost:30002/api/health
+
+kubectl get pods -n ingress-nginx
+kubectl get svc -n ingress-nginx
+
+kubectl apply -f .
+kubectl get svc
+kubectl get ingress
+
+kubectl apply -f .\mongo-pvc.yml
